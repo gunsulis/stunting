@@ -37,9 +37,9 @@ if st.button('Test Prediksi Stunting'):
     stunting_prediction = stunting_model.predict(
         [[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]])
 
-if (stunting_prediction[0] == 1):
-    stunting_diagnosis = 'Anak terindikasi Stunting'
-else:
-    stunting_diagnosis = 'Anak tidak terindikasi'
+    if (stunting_prediction[0] == 1):
+        stunting_diagnosis = 'Anak terindikasi Stunting'
+    else:
+        stunting_diagnosis = 'Anak tidak terindikasi'
 
 st.success(stunting_diagnosis)
